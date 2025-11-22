@@ -1,13 +1,15 @@
 version: 0.2
-
 phases:
   install:
     commands:
-      - echo "Nothing to test"
+      - echo Installing dependencies...
+      - npm install
   build:
     commands:
-      - echo "Build step skipped"
-
+      - echo Running tests...
+      - npm test
+      - echo Building application...
+      - npm run build
 artifacts:
   files:
     - '**/*'
