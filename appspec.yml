@@ -3,8 +3,5 @@ os: linux
 files:
   - source: /
     destination: /var/www/myapp
-hooks:
-  AfterInstall:
-    - location: scripts/restart_server.sh
-      timeout: 300
-      runas: root
+
+
