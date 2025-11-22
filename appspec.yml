@@ -1,7 +1,11 @@
 version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /var/www/myapp
+Resources:
+  - myLambdaFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: your-lambda-name
+        Alias: prod
+        CurrentVersion: 1
+        TargetVersion: 2
 
 
