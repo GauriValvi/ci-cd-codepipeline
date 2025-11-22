@@ -3,25 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "INSTALL PHASE"
-      - yum install -y jq || true
-
-  pre_build:
-    commands:
-      - echo "PRE-BUILD PHASE"
-
+      - echo "Nothing to test"
   build:
     commands:
-      - echo "BUILD PHASE"
-      - echo "Zipping application files..."
-      - zip -r app.zip .
-
-  post_build:
-    commands:
-      - echo "POST-BUILD PHASE"
-      - echo "Build completed."
+      - echo "Build step skipped"
 
 artifacts:
   files:
-    - app.zip
-
+    - '**/*'
