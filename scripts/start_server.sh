@@ -1,5 +1,10 @@
 #!/bin/bash
 echo "Starting Node server..."
 
-cd /var/www/myapp
-nohup node server.js > output.log 2>&1 &
+cd /path/to/app
+
+# Ensure dependencies are installed
+npm install
+
+# Start the app in the background so the script doesn’t block
+nohup npm start > app.log 2>&1 &
